@@ -25,7 +25,7 @@ export const currentProfile = async () => {
         name: `${userCurrent?.firstName} ${userCurrent?.lastName}`,
         imageUrl: userCurrent?.imageUrl,
         email: userCurrent?.emailAddresses[0].emailAddress,
-        username: userCurrent?.username,
+        username: userCurrent?.username!,
       }
     });
     if (updatedProfile) {
