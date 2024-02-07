@@ -13,7 +13,7 @@ export const ourFileRouter = {
   serverImage: f({ image: { maxFileSize: "8MB", maxFileCount: 1 } })
     .middleware(() => handleAuth())
     .onUploadComplete(() => {}),
-  messageFile: f(["image", "pdf", "gif"])
+  messageFile: f(["image", "pdf", "image/gif"])
     .middleware(() => handleAuth())
     .onUploadComplete(() => {})
 } satisfies FileRouter;
